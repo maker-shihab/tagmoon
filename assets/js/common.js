@@ -16,4 +16,24 @@ $(document).ready(function(){
         }
     }
 })
+    $('.s_a_t_1').click(function(){
+        $(this).addClass('active');
+        $('.s_a_t_2').removeClass('active');
+        $('.s_a_t_3').removeClass('active');
+        return false;
+    }); 
+    
+    $('.s_a_t_2').click(function(){
+        $(this).addClass('active');
+        $('.s_a_t_1').removeClass('active');
+        $('.s_a_t_3').removeClass('active');
+        return false;
+    }); 
+    
+    $('.s_a_t_3').click(function(){
+        $(this).addClass('active');
+        $('.s_a_t_1').removeClass('active');
+        $('.s_a_t_2').removeClass('active');
+        return false;
+    });
 });

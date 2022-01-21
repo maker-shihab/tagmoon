@@ -12,6 +12,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
+  overflow-x: hidden;
   font-family: var(--primary-fonts);
   color: #fff;
   background-color: var(--global-bg);
@@ -100,9 +101,6 @@ input::placeholder {
 				Header Style 
 ========================================*/
 /* GLOBAL CSS HERE */
-section {
-  background-image: url("../image/section-bg.png");
-}
 .setion_padding {
   padding: 70px 0;
 }
@@ -126,7 +124,7 @@ section {
   font-size: 140px;
   letter-spacing: 0.1em;
   text-align: center;
-  color: #43294b3d;
+  color: #43294b11;
   content: "TAGMOON";
   font-weight: 900;
   z-index: -1;
@@ -193,10 +191,8 @@ section {
 }
 /* HERO AREA */
 .hero_area {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding: 50px 0;
-  padding-bottom: 120px;
+  padding-top: 50px;
+  transform: translateY(2px);
 }
 .hero_subtitle {
   font-weight: 300;
@@ -240,33 +236,20 @@ section {
 }
 /* SUPPLY AREA */
 .supply_area {
-  padding: 50px 0;
+  position: relative;
 }
 .supply {
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 450px;
-}
-.supply::before {
   position: absolute;
-  background-image: url("../image/supply-bg.png");
-  content: "";
-  top: 0;
-  left: -13%;
-  right: 0;
-  width: 130%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  left: 0;
+  top: calc(50% - 20px);
+  width: 100%;
 }
+
 .supply_body {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 190px;
 }
 .supplyTitle {
   font-weight: 300;
@@ -285,6 +268,7 @@ section {
 /* ABOUT AREA */
 .about_area {
   background-color: #0f0613;
+  margin-bottom: -120px;
 }
 .about_tabs {
   padding-top: 20px;
@@ -298,7 +282,7 @@ section {
   padding: 10px;
   border-radius: 10px;
   display: block;
-  background: #31103d;
+  background: #3f1e4b;
   transition: 0.3s all ease-in-out;
 }
 .single_about_tab span {
@@ -312,17 +296,37 @@ section {
   line-height: 24px;
   text-align: center;
   color: #fff;
+  background: #31103d;
 }
-.single_about_tab:focus {
+.single_about_tab.active {
   transform: scale(1.2);
+  background: #2a1133;
+}
+.single_about_tab.active span {
+  background: #220b2b;
 }
 .about_text {
   text-align: right;
+}
+.about_shape {
+  position: relative;
+  z-index: 1;
+}
+.about_tagmoon_shape {
+  position: absolute;
+  content: "";
+  left: -150px;
+  top: -20px;
+  height: 700px;
+  width: 750px;
+  z-index: -1;
+  opacity: 0.4;
 }
 /* PROTOCOL AREA */
 .protocol_single_item {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 .protocol_single_item img {
   height: 90px;
@@ -342,6 +346,21 @@ section {
   color: #a585b0;
 }
 /* TOKEN AREA */
+#tokenomics {
+  position: relative;
+  z-index: 1;
+}
+#tokenomics::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  background-image: url("../image/tokenomis.png");
+  width: 100%;
+  top: 0px;
+  height: 100%;
+  opacity: 0.2;
+  right: 0;
+}
 .token_header .sectionTitle::before {
   content: "TOKENOMICS";
 }
@@ -412,17 +431,120 @@ section {
   color: #a585b0;
   display: block;
 }
-.token_main_center {
-  padding: 0 30px;
-}
 .tk_main_single_list ul li:not(:nth-child(3)) {
   padding-bottom: 12px;
 }
+.tokenGraph {
+  width: 220px;
+  margin: 0 auto;
+  text-align: center;
+}
+.check_area {
+  width: 270px;
+  margin: 0 auto;
+}
+/* CUSTOME CHECK */
+/* The container */
+.contaiBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+/* Hide the browser's default checkbox */
+.contaiBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkMark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #250e2d;
+  border: 1px solid var(--Primary_900);
+  border-radius: 5px;
+}
+.cb_i_2 {
+  background-color: #3c1849;
+}
+.cb_i_3 {
+  background-color: #5a3565;
+}
+.cb_i_4 {
+  background-color: #a585b0;
+}
+/* On mouse-over, add a grey background color */
+.contaiBox:hover input ~ .checkMark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.contaiBox input:checked ~ .checkMark {
+  background-color: var(--Primary_900);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contaiBox input:checked ~ .checkMark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contaiBox .checkMark:after {
+  left: 9px;
+  top: 3px;
+  width: 7px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* CUSTOME CHECK */
 /* ROAD MAP AREA */
 .roadMap_header .sectionTitle::before {
   content: "ROADMAP";
 }
 /* COMUNITY AREA */
+.community_pa {
+  position: relative;
+  z-index: 1;
+  background-color: #0f0613;
+}
+.community_pa::before {
+  position: absolute;
+  content: "";
+  background-image: url("../image/comunity/comunity-shape.png");
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+}
 .comunity_header .sectionTitle::before {
   content: "COMMUNITY";
 }
@@ -468,15 +590,47 @@ section {
   margin-top: 10px;
 }
 /* ROADMAP */
+.roadmap {
+  position: relative;
+  z-index: 1;
+}
 .roadmap_body {
   padding: 200px 0;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .roadmap_contetn {
   position: relative;
 }
-.road_map_shape img {
-  opacity: 0.2;
+.road_shape_after h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #e87800;
+  padding-bottom: 10px;
 }
+.road_shape_after p {
+  font-size: 16px;
+  color: #dcc2e6;
+}
+/* Road shape item */
+.road_single_shape_text {
+  position: relative;
+}
+.rd_s_s_3,
+.rd_s_s_1 {
+  padding-top: 190px;
+}
+
+.rd_s_s_3 {
+  transform: translateX(50px);
+}
+.rd_s_s_4 {
+  transform: translate(50px, -165px);
+}
+/* Road shape item */
 /* FOOTER AREA */
 .brand_footer_top {
   text-align: center;
@@ -538,4 +692,16 @@ section {
 }
 .footer_btns a:hover {
   color: #fff;
+}
+footer {
+  position: relative;
+}
+.footer_body_content {
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 100%;
+}
+.footer_shape img {
+  height: 400px;
 }
