@@ -1,0 +1,181 @@
+@media screen and (min-width: 1800px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 1400px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main_menu {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .rd_s_s_3,
+  .rd_s_s_1 {
+    padding-top: 230px;
+  }
+  .road_single_shape_text.rd_s_s_2 {
+    padding-top: 45px;
+    margin-left: -20px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .menu {
+    column-gap: 20px;
+  }
+  .menu li a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+  .footer_btns a {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .brandTitle {
+    font-size: 15px;
+  }
+  .single_brand img {
+    height: 45px;
+  }
+  .cm_single_text {
+    padding: 70px 10px;
+    padding-bottom: 120px;
+  }
+  .rd_s_s_3,
+  .rd_s_s_1 {
+    padding-top: 130px;
+  }
+  .road_single_shape_text.rd_s_s_2 {
+    padding-top: 0px;
+    margin-left: -20px;
+    transform: translateY(-70px);
+  }
+  .rd_s_s_4 {
+    transform: translate(50px, -234px);
+  }
+  .roadmap_body_desktop,
+  .r-m-s-desktop {
+    display: none;
+  }
+  .roadmap_body_mobile,
+  .r-m-s-mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 991px) {
+  .mobile_tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .header_menu {
+    display: block;
+    padding: 10px 0;
+  }
+  .main_menu {
+    display: none;
+  }
+  .menu {
+    column-gap: 20px;
+    flex-direction: column;
+    row-gap: 20px;
+    background: #4d1e63;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+  }
+  .hero_area .row {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+  }
+  .hero_shape {
+    transform: scale(1);
+  }
+  .hero_area {
+    padding-top: 0;
+  }
+  .footer_space {
+    display: none;
+  }
+  .footer_box {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .footer_weidget {
+    width: 200px;
+  }
+  .footer_box_left,
+  .footer_box_right {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+  .footer_shape img {
+    height: auto;
+  }
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+  .footer_body_content {
+    padding-bottom: 50px;
+  }
+  .token_main_center {
+    padding: 70px 0;
+  }
+  .roadmap_body {
+    padding: 200px 0;
+  }
+  .sectionTitle {
+    padding-bottom: 0px;
+  }
+  .about_tagmoon_shape {
+    right: 0;
+    left: -90px;
+    top: -40px;
+    height: 500px;
+    width: 550px;
+  }
+  .community_single {
+    width: 210px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .comunity_header {
+    padding-bottom: 20px;
+  }
+  .roadmap_body {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about_content .row {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footer_box_left,
+  .footer_box_right {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+  }
+  .footer_weidget {
+    text-align: center;
+  }
+  .footer_body_content {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+}

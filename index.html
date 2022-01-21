@@ -41,17 +41,17 @@
     <header>
       <div class="container">
         <div class="header_area">
-          <div class="row align-items-center justify-content-between">
-            <!-- LOGO -->
-            <div class="col-md-12">
-              <div class="header_menu">
+          <div class="header_menu">
+            <div class="row align-items-center justify-content-between">
+              <!-- LOGO -->
+              <div class="col-lg-3 col-md-12 mobile_tab">
                 <a href="#" class="logo">
                   <img src="assets/image/logo.png" alt="logo" />
                 </a>
                 <!-- MOBILE BAR -->
-                <div class="d-md-none">
+                <div class="d-lg-none">
                   <div class="mobile-menu-icon">
-                    <div class="all-p-humber open">
+                    <div class="all-p-humber">
                       <span></span>
                       <span></span>
                       <span></span>
@@ -59,8 +59,10 @@
                     </div>
                   </div>
                 </div>
-                <!-- MAIN MENU -->
-                <nav>
+              </div>
+              <!-- MAIN MENU -->
+              <div class="col-lg-9 col-md-12">
+                <nav class="main_menu">
                   <ul class="menu">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="#tokenomics">TOKENOMICS</a></li>
@@ -84,7 +86,7 @@
     <section class="hero_area">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-7">
+          <div class="col-lg-7">
             <div class="hero_text">
               <h3 class="hero_subtitle">Welcome!</h3>
               <h1 class="hero_title">Meet <span>#TAGMOON</span></h1>
@@ -98,12 +100,15 @@
               </p>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-lg-5">
             <div class="hero_shape">
               <img src="assets/image/astronaut.png" alt="astronaut" />
             </div>
           </div>
         </div>
+      </div>
+      <div class="header_shape_dots">
+        <img src="assets/image/header-dots-shape.png" alt="header-shape" />
       </div>
     </section>
     <!-- END HERO AREA -->
@@ -116,7 +121,7 @@
           <div class="supply_body_content">
             <div class="row">
               <div class="col-md-12">
-                <div class="supply_body">
+                <div class="supply_body owl-carousel owl-theme">
                   <!-- SINGLE SUPPLY ITEM -->
                   <div class="single_supply">
                     <h3 class="supplyTitle">MarketCap</h3>
@@ -152,6 +157,9 @@
     <!-- END SUPPLY AREA -->
     <!-- ABOUT AREA -->
     <section class="about_area" id="litepaper">
+      <div class="about_dots_shape">
+        <img src="assets/image/about/about-dots-pro.png" alt="dots" />
+      </div>
       <div class="container">
         <div class="about_header">
           <div class="row">
@@ -212,7 +220,7 @@
                   <img src="assets/image/why-ils.svg" alt="about_shape" />
                   <div class="about_tagmoon_shape">
                     <img
-                      src="assets/image/tagmoon-img-shape.png"
+                      src="assets/image/about/tagmoon-img-shape.png"
                       alt="tagmoon"
                     />
                   </div>
@@ -234,7 +242,7 @@
           <div class="supply_body_content">
             <div class="row">
               <div class="col-md-12">
-                <div class="supply_body">
+                <div class="supply_body owl-carousel owl-theme">
                   <!-- SINGLE SUPPLY ITEM -->
                   <div class="single_supply">
                     <h3 class="supplyTitle">MarketCap</h3>
@@ -369,7 +377,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <div class="token_supply py-5">
+              <div class="token_supply py-5 owl-carousel owl-theme">
                 <div class="token_supply_single">
                   <p>Token Name</p>
                   <h3>TAGMOON</h3>
@@ -392,7 +400,7 @@
           <!-- TOKEN MAIN CONTENT -->
           <div class="token_mainContent pt-3">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-lg-4">
                 <div class="token_main_single">
                   <div class="left_tk_card">
                     <div class="tk_main_single">
@@ -424,7 +432,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-lg-4">
                 <div class="token_main_center">
                   <div class="tokenGraph pb-5">
                     <img src="assets/image/token-shape.png" alt="graph" />
@@ -462,7 +470,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-lg-4">
                 <div class="token_main_single">
                   <div class="left_tk_card">
                     <div class="tk_main_single">
@@ -504,10 +512,13 @@
     <!-- END TOKEN AREA -->
     <!-- ROADMAP AREA -->
     <section class="roadmap" id="roadmap">
-      <div class="road_map_shape">
+      <div class="road_map_shape r-m-s-desktop">
         <img src="assets/image/roadmap/roadmap-bg-desk.png" alt="road-shape" />
       </div>
-      <div class="roadmap_body">
+      <div class="road_map_shape r-m-s-mobile">
+        <img src="assets/image/roadmap/roadmap-bg.png" alt="road-shape" />
+      </div>
+      <div class="roadmap_body roadmap_body_desktop">
         <div class="roadMap_header">
           <div class="container">
             <div class="row">
@@ -556,6 +567,71 @@
                     </div>
                     <div class="col-md-3">
                       <div class="road_single_shape_text rd_s_s_4">
+                        <div class="road_shape_after">
+                          <h3>Phase 4</h3>
+                          <p>
+                            Initiate Staking Process. Tagmoon Mining Every Hour.
+                            Rewarding Stakers Every Hour.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="roadmap_body roadmap_body_mobile">
+        <div class="roadMap_header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="sectionTitle">Our Roadmap</h3>
+              </div>
+            </div>
+          </div>
+          <!-- ROADMAP CONTENT -->
+          <div class="roadmap_contetn pt-5">
+            <div class="road_map_body">
+              <div class="container">
+                <div class="road_map_area_content">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="road_single_shape_text">
+                        <div class="road_shape_after">
+                          <h3>Phase 1</h3>
+                          <p>
+                            Project Planning Project Research Team Collaboration
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="road_single_shape_text">
+                        <div class="road_shape_after">
+                          <h3>Phase 2</h3>
+                          <p>
+                            10,000 Top Hashtag Search & Save Tagmoon Coin
+                            Contract Pre - Sale 3B Coin @ $ 0.000025
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="road_single_shape_text">
+                        <div class="road_shape_after">
+                          <h3>Phase 3</h3>
+                          <p>
+                            Buy 10,000+ Hashtags. Tagmoon Staking Contract.
+                            Tagmoon Coin on Pancakeswap.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="road_single_shape_text">
                         <div class="road_shape_after">
                           <h3>Phase 4</h3>
                           <p>
