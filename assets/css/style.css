@@ -348,7 +348,7 @@ input::placeholder {
   background-color: #0f0613;
   margin-bottom: -120px;
   position: relative;
-  z-index: 1;
+  z-index: 111;
 }
 .about_dots_shape {
   position: absolute;
@@ -506,6 +506,7 @@ input::placeholder {
   font-size: 18px;
   padding-top: 10px;
   font-weight: 600;
+  line-height: 26px;
 }
 .tk_main_single h3 span {
   font-size: 16px;
@@ -517,8 +518,11 @@ input::placeholder {
   color: #a585b0;
   display: block;
 }
+.tk_main_single_list ul {
+  padding-top: 10px;
+}
 .tk_main_single_list ul li:not(:nth-child(3)) {
-  padding-bottom: 12px;
+  padding-bottom: 20px;
 }
 .tokenGraph {
   width: 220px;
@@ -643,6 +647,7 @@ input::placeholder {
 }
 .community_single img {
   height: 50px;
+  width: 50px;
 }
 .community_single a {
   font-weight: 300;
@@ -668,6 +673,7 @@ input::placeholder {
   letter-spacing: -0.03em;
   line-height: 30px;
   text-align: center;
+  padding-bottom: 10px;
   color: #d6bae0;
 }
 .single_brand img {
@@ -679,6 +685,9 @@ input::placeholder {
 .roadmap {
   position: relative;
   z-index: 1;
+}
+.roadmap_body_mobile {
+  display: none;
 }
 .r-m-s-mobile {
   display: none;
@@ -793,4 +802,19 @@ footer {
 }
 .footer_shape img {
   height: 400px;
+}
+.single_supply,
+.token_supply_single {
+  text-align: center;
+}
+.about_text {
+  position: relative;
+  z-index: 111;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: auto;
+  height: 35px;
+  text-align: center;
+  margin: 0 auto;
 }

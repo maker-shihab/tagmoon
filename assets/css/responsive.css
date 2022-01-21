@@ -11,7 +11,7 @@
     display: block !important;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .rd_s_s_3,
   .rd_s_s_1 {
     padding-top: 230px;
@@ -23,6 +23,8 @@
 }
 @media screen and (max-width: 1199px) {
   .menu {
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
     column-gap: 20px;
   }
   .menu li a {
@@ -34,11 +36,12 @@
     font-size: 12px;
     padding: 10px;
   }
-  .brandTitle {
-    font-size: 15px;
-  }
+
   .single_brand img {
     height: 45px;
+  }
+  .brandTitle {
+    font-size: 22px;
   }
   .cm_single_text {
     padding: 70px 10px;
@@ -51,24 +54,42 @@
   .road_single_shape_text.rd_s_s_2 {
     padding-top: 0px;
     margin-left: -20px;
+    -webkit-transform: translateY(-70px);
     transform: translateY(-70px);
   }
   .rd_s_s_4 {
+    -webkit-transform: translate(50px, -234px);
     transform: translate(50px, -234px);
   }
   .roadmap_body_desktop,
   .r-m-s-desktop {
     display: none;
   }
-  .roadmap_body_mobile,
   .r-m-s-mobile {
+    display: block;
+    height: 550px;
+  }
+  .roadmap_body {
+    padding: 20px 0;
+    top: 120px;
+  }
+  .roadMap_header .sectionTitle {
+    padding-bottom: 0px;
+  }
+  .roadmap_body_mobile {
     display: block;
   }
 }
 @media screen and (max-width: 991px) {
   .mobile_tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     padding: 10px 10px;
@@ -81,7 +102,12 @@
     display: none;
   }
   .menu {
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
     column-gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 20px;
     background: #4d1e63;
@@ -89,10 +115,14 @@
     border-radius: 0 0 15px 15px;
   }
   .hero_area .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     row-gap: 50px;
   }
   .hero_shape {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
   .hero_area {
@@ -102,7 +132,9 @@
     display: none;
   }
   .footer_box {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     row-gap: 30px;
   }
@@ -111,8 +143,14 @@
   }
   .footer_box_left,
   .footer_box_right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
     column-gap: 50px;
   }
   .footer_shape img {
@@ -131,9 +169,6 @@
   .roadmap_body {
     padding: 200px 0;
   }
-  .sectionTitle {
-    padding-bottom: 0px;
-  }
   .about_tagmoon_shape {
     right: 0;
     left: -90px;
@@ -150,21 +185,119 @@
     padding-bottom: 20px;
   }
   .roadmap_body {
-    padding-top: 100px;
+    padding: 20px 0;
+    top: 120px;
+  }
+  .roadmap_body_mobile {
+    display: block !important;
+  }
+  .roadmap_body_desktop {
+    display: none;
+  }
+  .hero_text {
+    text-align: center;
+  }
+  .hero_title {
+    font-size: 42px;
+    text-align: center;
+  }
+  .hero_subtitle {
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+  .hero_subPragrap {
+    margin: 0 auto;
+  }
+  .sectionTitle:before {
+    font-size: 100px;
+  }
+  .subSection_title {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  .sectionTitle {
+    font-size: 42px;
+    padding-bottom: 50px;
+  }
+  .hero_pragrap,
+  .hero_subPragrap,
+  .section_pragrap {
+    font-size: 20px;
+  }
+  .about_tabs {
+    padding-top: 50px;
+  }
+  .protocol-title {
+    font-size: 22px;
+  }
+  .about_text {
+    text-align: center;
+  }
+  .about_content {
+    padding-bottom: 100px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .about_content .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     row-gap: 50px;
     padding-bottom: 100px;
+  }
+  .r-m-s-mobile {
+    display: block;
+    height: 650px;
+  }
+  .subSection_title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .token_supply_single p,
+  .supplyTitle {
+    font-size: 16px;
+  }
+  .token_supply_single h3,
+  .supplyText {
+    font-size: 18px;
+  }
+  .about_content {
+    padding-bottom: 0px !important;
+  }
+  .single_about_tab span {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .about_area {
+    background-color: rgb(15, 6, 19);
+    margin-bottom: -90px;
+    position: relative;
+    z-index: 1;
+  }
+  .tk_main_single h3 {
+    font-size: 16px;
+  }
+  .tk_main_single h3 span {
+    font-size: 14px;
+  }
+  .brandTitle {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 575px) {
   .footer_box_left,
   .footer_box_right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     row-gap: 30px;
   }
@@ -177,5 +310,67 @@
     top: 70px;
     padding-bottom: 50px;
     width: 100%;
+  }
+  .r-m-s-mobile {
+    display: block;
+    height: 850px;
+  }
+  .road_shape_after {
+    text-align: center;
+    padding-bottom: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hero_title {
+    font-size: 36px;
+  }
+  .hero_subtitle {
+    font-size: 20px;
+    padding-bottom: 0;
+  }
+  .hero_pragrap,
+  .hero_subPragrap,
+  .section_pragrap {
+    font-size: 16px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+    padding-bottom: 35px;
+  }
+  .sectionTitle:before {
+    font-size: 75px;
+  }
+  .subSection_title {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: -25px;
+  }
+  .token_box a {
+    font-size: 12px;
+  }
+  .token_box h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  .brand_footer_top {
+    padding-bottom: 30px;
+  }
+  .footer_menu_socail {
+    -webkit-column-gap: 25px;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .brandTitle {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .single_about_tab span {
+    padding: 10px;
+    font-size: 11px;
+    line-height: 18px;
   }
 }
